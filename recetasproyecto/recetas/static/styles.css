@@ -1,0 +1,99 @@
+/* recetas/static/recetas/styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 1) url('background.avif') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuir el contenido verticalmente */
+    overflow-x: hidden; /* Evitar barra de desplazamiento horizontal */
+}
+
+h1 {
+    margin-top: 0;
+}
+
+form {
+    
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo menos blanco con opacidad del 90% */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: auto; /* Centra el formulario */
+}
+
+input[type="text"], textarea {
+    width: calc(100% - 20px); /* Resto el padding para que no se desborde */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el carrusel */
+.carousel-container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container img {
+    width: 100%;
+    display: none;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 0 auto;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* Estilos para los datos en el footer */
+.footer-data {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.title-container {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1; /* Ajusta el índice z para que esté sobre el carrusel */
+}
+
+
+.title-text, .slogan-text {
+    font-size: 4em;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la visibilidad */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}

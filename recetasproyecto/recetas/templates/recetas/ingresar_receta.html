@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ingresar Receta</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'carousel.css' %}" />
+    <!-- Asegúrate de incluir este enlace -->
+  </head>
+  <body>
+    <!-- Título y eslogan sobre el carrusel -->
+    <div class="title-container">
+      <h1 class="title-text">Appetezzer</h1>
+      <p class="slogan-text">Tus recetas, siempre a tu alcance.</p>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel-container">
+      <img src="{% static 'image1.avif' %}" alt="Imagen 1" class="mySlides" />
+      <img src="{% static 'image2.avif' %}" alt="Imagen 2" class="mySlides" />
+      <img src="{% static 'image3.avif' %}" alt="Imagen 3" class="mySlides" />
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+
+    <h1>Ingresar Receta</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Guardar Receta</button>
+    </form>
+
+    <!-- Formulario de contacto en el footer -->
+    <footer>
+      <h2>Contacto</h2>
+      <p>Contacto: Diaz Sandate Hector Jose</p>
+      <p>Email: hectorjosediazsandate@gmail.com</p>
+      <p>Número: 6182939146</p>
+    </footer>
+
+    <!-- Agrega el script para el carrusel -->
+    <script src="{% static 'carousel.js' %}"></script>
+  </body>
+</html>

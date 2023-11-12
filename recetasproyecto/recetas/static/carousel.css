@@ -1,0 +1,44 @@
+
+
+.carousel-container {
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw; /* Cambiado a 100vw para ocupar todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container img {
+    width: 100vw; /* Cambiado a 100vw para ocupar todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    display: none;
+    object-fit: cover; /* Ajusta el contenido de la imagen para cubrir completamente el contenedor */
+     filter: brightness(70%); /* Ajusta el valor según sea necesario para oscurecer las imágenes */
+}
+
+/* Ajusta el estilo de las flechas para ocupar el ancho completo */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background-color: #333;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 5%; /* Ajusta según sea necesario */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Estilos adicionales según sea necesario */
